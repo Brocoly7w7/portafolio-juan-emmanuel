@@ -1,0 +1,222 @@
+
+/* VARIABLES DE DISEÑO */
+:root {
+  --fondo: #081321;
+  --fondo-secundario: #102137;
+  --texto: #f1f5f9;
+  --gris: #a3b2c5;
+  --acento: #57dfc4;
+}
+
+/* ESTILOS GENERALES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* NAVEGACIÓN */
+.header {
+  background: rgba(8, 19, 33, 0.95);
+  border-bottom: 1px solid #24354a;
+}
+
+.navbar {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 15px 0;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.logo span {
+  color: var(--acento);
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--acento);
+}
+
+/* PRESENTACIÓN */
+.hero {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  padding: 95px 0;
+}
+
+.saludo {
+  color: var(--acento);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 7vw, 72px);
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.hero h1 span {
+  color: var(--acento);
+}
+
+.hero h2 {
+  font-size: clamp(18px, 3vw, 27px);
+  color: var(--gris);
+  margin-bottom: 20px;
+}
+
+.descripcion {
+  max-width: 650px;
+  color: var(--gris);
+  font-size: 17px;
+  margin-bottom: 32px;
+}
+
+/* BOTONES */
+.botones {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: var(--acento);
+  color: var(--fondo);
+}
+
+.btn-outline {
+  border: 1px solid var(--acento);
+  color: var(--acento);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--acento);
+  outline-offset: 4px;
+}
+
+/* SOBRE MÍ */
+.sobre-mi {
+  background: var(--fondo-secundario);
+  padding: 90px 0;
+}
+
+.subtitulo {
+  font-size: 13px;
+  color: var(--acento);
+  letter-spacing: 3px;
+}
+
+.sobre-mi h2 {
+  font-size: 36px;
+  margin: 12px 0 25px;
+}
+
+.sobre-mi p:not(.subtitulo) {
+  max-width: 850px;
+  color: var(--gris);
+  margin-bottom: 20px;
+}
+
+/* PIE DE PÁGINA */
+.footer {
+  text-align: center;
+  padding: 35px 0;
+  color: var(--gris);
+  font-size: 14px;
+}
+
+/* DISEÑO PARA CELULARES */
+@media (max-width: 600px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  nav {
+    gap: 16px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 80px 0;
+  }
+
+  .descripcion {
+    font-size: 15px;
+  }
+
+  .sobre-mi {
+    padding: 65px 0;
+  }
+
+  .sobre-mi h2 {
+    font-size: 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn,
+  nav a {
+    transition: none;
+  }
+}
