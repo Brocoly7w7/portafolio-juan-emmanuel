@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ETAPA 4: completa estos datos con tus enlaces profesionales reales.
 // Ejemplo: const CORREO_PROFESIONAL = "tucorreo@dominio.com";
 const CORREO_PROFESIONAL = "brocoly7w7@gmail.com";
-const LINKEDIN_PERSONAL = ""; // Ejemplo: "https://www.linkedin.com/in/tu-usuario/"
+const LINKEDIN_PERSONAL = "https://www.linkedin.com/in/juan-emmanuel-rosales-fernandez-6a1b41447"; // Ejemplo: "https://www.linkedin.com/in/tu-usuario/"
 
 document.addEventListener("DOMContentLoaded", () => {
   const emailBox = document.getElementById("email-container");
