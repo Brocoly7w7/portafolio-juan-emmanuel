@@ -29,3 +29,27 @@
 .education-card strong{color:var(--texto)}
 @media(min-width:700px){.skills-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.habilidades,.trayectoria{padding:65px 0}.skill-card{padding:20px}.education-card{padding:20px}}
+
+
+/* ETAPA 4 — CV y contacto */
+.contacto{padding:90px 0;background:var(--fondo-secundario)}
+.contacto h2{font-size:clamp(30px,4vw,38px);margin:12px 0 25px}
+.contact-layout{display:grid;grid-template-columns:1fr;gap:22px;align-items:start}
+.contact-panel,.contact-form{background:#081a2c;border:1px solid #31516a;border-radius:16px;padding:24px;min-width:0}
+.contact-panel h3,.contact-form h3{font-size:21px;margin:0 0 20px}
+.contact-panel a{color:var(--acento);text-decoration:underline;text-underline-offset:4px;overflow-wrap:anywhere}
+.contact-note,.form-help{color:var(--gris);font-size:13px}
+.contact-note{margin:15px 0}
+.contact-form{display:flex;flex-direction:column;gap:10px}
+.contact-form label{font-size:14px;font-weight:600}
+.contact-form input,.contact-form textarea{width:100%;min-width:0;border:1px solid #41607a;border-radius:8px;background:#0b2137;color:var(--texto);padding:12px 14px;font:inherit;font-size:15px}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:#91a4b7}
+.contact-form input:focus-visible,.contact-form textarea:focus-visible{outline:3px solid var(--acento);outline-offset:2px}
+.contact-form textarea{resize:vertical}
+.contact-form button{align-self:flex-start;cursor:pointer;font:inherit;font-weight:700;border:0;margin-top:8px}
+.form-status{min-height:1.5em;font-size:14px;margin:0}
+.form-status.error{color:#ffb4ac}
+.form-status.success{color:var(--acento)}
+.form-help{margin:0}
+@media(min-width:800px){.contact-layout{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}}
+@media(max-width:600px){.contacto{padding:65px 0}.contact-panel,.contact-form{padding:20px}}

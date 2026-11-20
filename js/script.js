@@ -50,3 +50,60 @@ document.addEventListener("DOMContentLoaded", () => {
   closeButton.addEventListener("click", () => dialog.close());
   dialog.addEventListener("click", event => { if (event.target === dialog) dialog.close(); });
 });
+
+
+// ETAPA 4: completa estos datos con tus enlaces profesionales reales.
+// Ejemplo: const CORREO_PROFESIONAL = "tucorreo@dominio.com";
+const CORREO_PROFESIONAL = "brocoly7w7@gmail.com";
+const LINKEDIN_PERSONAL = ""; // Ejemplo: "https://www.linkedin.com/in/tu-usuario/"
+
+document.addEventListener("DOMContentLoaded", () => {
+  const emailBox = document.getElementById("email-container");
+  const emailLink = document.getElementById("email-link");
+  const linkedinBox = document.getElementById("linkedin-container");
+  const linkedinLink = document.getElementById("linkedin-link");
+  const contactForm = document.getElementById("contact-form");
+  const status = document.getElementById("contact-status");
+
+  if (CORREO_PROFESIONAL) {
+    emailLink.href = "mailto:" + CORREO_PROFESIONAL;
+    emailLink.textContent = CORREO_PROFESIONAL + " ↗";
+    emailBox.hidden = false;
+  }
+  if (LINKEDIN_PERSONAL.startsWith("https://www.linkedin.com/")) {
+    linkedinLink.href = LINKEDIN_PERSONAL;
+    linkedinBox.hidden = false;
+  }
+
+  contactForm.addEventListener("submit", event => {
+    event.preventDefault();
+    status.className = "form-status";
+    status.textContent = "";
+
+    // HTML5 verifica campos obligatorios, formato de correo y longitud mínima.
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      status.classList.add("error");
+      status.textContent = "Revisa los campos obligatorios y escribe un mensaje de al menos 10 caracteres.";
+      return;
+    }
+
+    if (!CORREO_PROFESIONAL) {
+      status.classList.add("error");
+      status.textContent = "El formulario aún no puede enviar mensajes: falta configurar el correo profesional del portafolio.";
+      return;
+    }
+
+    const data = new FormData(contactForm);
+    const subject = "Contacto desde mi portafolio — " + data.get("nombre");
+    const body = "Nombre: " + data.get("nombre") + "\n"
+      + "Correo: " + data.get("correo") + "\n\n"
+      + "Mensaje:\n" + data.get("mensaje");
+    const url = "mailto:" + CORREO_PROFESIONAL
+      + "?subject=" + encodeURIComponent(subject)
+      + "&body=" + encodeURIComponent(body);
+    status.classList.add("success");
+    status.textContent = "Se abrirá tu aplicación de correo. Revisa el mensaje y pulsa Enviar allí.";
+    window.location.href = url;
+  });
+});
