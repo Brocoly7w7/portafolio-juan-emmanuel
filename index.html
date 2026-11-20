@@ -1,119 +1,125 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description"
-        content="Portafolio profesional de Juan Emmanuel Rosales Fernández. Desarrollo de software, IoT y automatización.">
-
+  <meta name="description" content="Portafolio profesional de Juan Emmanuel Rosales Fernández. Desarrollo de software, IoT y automatización.">
+  <meta name="theme-color" content="#081321">
   <title>Juan Emmanuel | Portafolio Profesional</title>
-
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/script.js" defer></script>
 </head>
-
 <body>
-
-  <!-- ENCABEZADO Y NAVEGACIÓN -->
   <header class="header">
     <div class="container navbar">
-
-      <a href="#inicio" class="logo">JR<span>.</span></a>
-
+      <a href="#inicio" class="logo" aria-label="Volver al inicio">JR<span>.</span></a>
       <nav aria-label="Navegación principal">
         <a href="#inicio">Inicio</a>
         <a href="#sobre-mi">Sobre mí</a>
-        <a href="https://github.com/Brocoly7w7"
-           target="_blank"
-           rel="noopener noreferrer">GitHub</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="https://github.com/Brocoly7w7" target="_blank" rel="noopener noreferrer">GitHub</a>
       </nav>
-
     </div>
   </header>
-
   <main>
-
-    <!-- SECCIÓN DE INICIO -->
     <section id="inicio" class="hero">
-
       <div class="container">
-
         <p class="saludo">¡Hola! Bienvenido a mi portafolio</p>
-
-        <h1>Juan Emmanuel<br>
-          <span>Rosales Fernández</span>
-        </h1>
-
-        <h2>
-          Ingeniería Informática | Software e IoT
-        </h2>
-
-        <p class="descripcion">
-          Desarrollo soluciones tecnológicas que integran
-          programación, electrónica y automatización
-          para resolver problemas reales.
-        </p>
-
+        <h1>Juan Emmanuel<br><span>Rosales Fernández</span></h1>
+        <h2>Ingeniería Informática | Software e IoT</h2>
+        <p class="descripcion">Desarrollo soluciones tecnológicas que integran programación, electrónica y automatización para resolver problemas reales.</p>
         <div class="botones">
-          <a href="#sobre-mi" class="btn btn-primary">
-            Conóceme
-          </a>
-
-          <a href="https://github.com/Brocoly7w7"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="btn btn-outline">
-            Mi GitHub
-          </a>
+          <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn btn-outline" href="https://github.com/Brocoly7w7" target="_blank" rel="noopener noreferrer">Mi GitHub</a>
         </div>
-
       </div>
     </section>
-
-    <!-- SECCIÓN SOBRE MÍ -->
     <section id="sobre-mi" class="sobre-mi">
-
       <div class="container">
-
         <p class="subtitulo">UN POCO SOBRE MÍ</p>
-
         <h2>Sobre mí</h2>
-
-        <p>
-          Soy Juan Emmanuel Rosales Fernández, estudiante
-          de séptimo semestre de Ingeniería Informática
-          en el Instituto Tecnológico Superior de Irapuato.
-        </p>
-
-        <p>
-          Me apasiona comprender cómo funcionan las cosas
-          y desarrollar proyectos que combinan software
-          y hardware. He trabajado en aplicaciones móviles,
-          sistemas IoT, electrónica y drones FPV.
-        </p>
-
-        <p>
-          Mi objetivo profesional es especializarme en
-          electrónica y automatización, sin dejar de lado
-          el desarrollo de software.
-        </p>
-
+        <p>Soy Juan Emmanuel Rosales Fernández, estudiante de séptimo semestre de Ingeniería Informática en el Instituto Tecnológico Superior de Irapuato.</p>
+        <p>Me apasiona comprender cómo funcionan las cosas y desarrollar proyectos que combinan software y hardware. He trabajado en aplicaciones móviles, sistemas IoT, electrónica y drones FPV.</p>
+        <p>Mi objetivo profesional es especializarme en electrónica y automatización, sin dejar de lado el desarrollo de software.</p>
       </div>
     </section>
-
+    <!-- ETAPA 2: PROYECTOS REALES -->
+    <section id="proyectos" class="proyectos">
+      <div class="container">
+        <p class="subtitulo">TRABAJOS SELECCIONADOS</p>
+        <h2>Proyectos destacados</h2>
+        <p class="section-intro">Una selección de proyectos académicos y personales donde combino programación, electrónica y soluciones para problemas reales.</p>
+        <div class="project-grid">
+          <article class="project-card">
+            <img src="assets/images/kiwpos.webp" loading="lazy" width="640" height="960" alt="Pantalla de caja y registro de productos de KiwPOS">
+            <div class="project-content">
+              <span class="project-year">Junio de 2026</span>
+              <h3>KiwPOS — Aplicación de ventas</h3>
+              <p>Digitaliza notas de venta antes elaboradas a mano, registra artículos, calcula totales y genera tickets para impresora térmica.</p>
+              <div class="tags"><span>Flutter</span><span>Dart</span><span>Cloud Firestore</span></div>
+              <button class="details-button" type="button" data-project="kiwpos">Ver detalles <span aria-hidden="true">↗</span></button>
+              <p class="repo-pending">Repositorio del proyecto: pendiente de publicación</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <img src="assets/images/site-monitor.webp" loading="lazy" width="1080" height="1440" alt="Circuito del sistema IoT con ESP32-S3 y módulos sobre protoboard">
+            <div class="project-content">
+              <span class="project-year">Octubre de 2026</span>
+              <h3>SITE MONITOR — Sistema IoT</h3>
+              <p>Supervisa condiciones ambientales y presencia de agua, permite configurar umbrales desde una interfaz web y envía alertas.</p>
+              <div class="tags"><span>ESP32-S3</span><span>Ethernet</span><span>Telegram</span><span>HTTPS</span></div>
+              <button class="details-button" type="button" data-project="site">Ver detalles <span aria-hidden="true">↗</span></button>
+              <p class="repo-pending">Repositorio del proyecto: pendiente de publicación</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <img src="assets/images/hydrohero.webp" loading="lazy" width="1430" height="700" alt="Captura de HydroHero, videojuego de plataformas con escenario contaminado">
+            <div class="project-content">
+              <span class="project-year">2025 — 2026</span>
+              <h3>HydroHero — Videojuego educativo</h3>
+              <p>Videojuego de plataformas sobre el cuidado del agua; fue evaluado en noviembre de 2025 y recibió el tercer lugar en mayo de 2026.</p>
+              <div class="tags"><span>Python</span><span>Pygame</span><span>Videojuegos 2D</span></div>
+              <button class="details-button" type="button" data-project="hydro">Ver detalles <span aria-hidden="true">↗</span></button>
+              <p class="repo-pending">Repositorio del proyecto: pendiente de publicación</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <img src="assets/images/carro-arduino.webp" loading="lazy" width="1386" height="900" alt="Automóvil electrónico personalizado con luces verdes y cuatro ruedas">
+            <div class="project-content">
+              <span class="project-year">Marzo de 2024</span>
+              <h3>Automóvil con Arduino</h3>
+              <p>Vehículo controlado con mando de PS5 y aplicación móvil, con iluminación LED y diseño personalizado.</p>
+              <div class="tags"><span>Arduino</span><span>Electrónica</span><span>Control inalámbrico</span></div>
+              <button class="details-button" type="button" data-project="carro">Ver detalles <span aria-hidden="true">↗</span></button>
+              <p class="repo-pending">Repositorio del proyecto: pendiente de publicación</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <img src="assets/images/dron-fpv.webp" loading="lazy" width="1280" height="900" alt="Dron FPV de cuatro hélices turquesa con cámara frontal y componentes montados">
+            <div class="project-content">
+              <span class="project-year">Desde enero de 2024</span>
+              <h3>Construcción de dron FPV</h3>
+              <p>Después de un prototipo con ESP32 que no se estabilizó, integré una controladora de vuelo y ESC para construir un dron funcional.</p>
+              <div class="tags"><span>FPV</span><span>ESC</span><span>Electrónica</span></div>
+              <button class="details-button" type="button" data-project="dron">Ver detalles <span aria-hidden="true">↗</span></button>
+              <p class="repo-pending">Repositorio del proyecto: pendiente de publicación</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
-
-  <!-- PIE DE PÁGINA -->
-  <footer class="footer">
-    <div class="container">
-      <p>
-        © <span id="year"></span>
-        Juan Emmanuel Rosales Fernández
-      </p>
+  <footer class="footer"><div class="container"><p>© <span id="year"></span> Juan Emmanuel Rosales Fernández</p></div></footer>
+  <!-- Modal nativo HTML; el botón de cierre y Escape funcionan -->
+  <dialog id="project-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-content">
+      <button type="button" class="close-dialog" aria-label="Cerrar detalle">×</button>
+      <p class="subtitulo" id="dialog-year"></p>
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-description"></p>
+      <h3>Desarrollo y aprendizajes</h3>
+      <p id="dialog-learnings"></p>
     </div>
-  </footer>
-
+  </dialog>
 </body>
 </html>
