@@ -53,3 +53,14 @@
 .form-help{margin:0}
 @media(min-width:800px){.contact-layout{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}}
 @media(max-width:600px){.contacto{padding:65px 0}.contact-panel,.contact-form{padding:20px}}
+
+
+
+.repo-pending a {
+  color: var(--acento);
+  text-decoration: underline;
+}
+
+.repo-pending a:hover {
+  color: white;
+}
