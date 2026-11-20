@@ -64,3 +64,10 @@
 .repo-pending a:hover {
   color: white;
 }
+
+
+
+#dialog-learnings {
+  white-space: pre-line;
+  line-height: 1.8;
+}

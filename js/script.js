@@ -9,12 +9,25 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "Diseñé una aplicación móvil para un negocio de la Central de Abastos que reemplaza notas manuscritas propensas a errores por registros de productos, cálculos de ventas y tickets impresos.",
       learnings: "La desarrollé con Flutter y Dart. Los datos operativos se almacenan localmente y utilicé Cloud Firestore para gestionar usuarios, accesos y membresías. Aprendí a conectar requisitos de un negocio real con una interfaz útil."
     },
+    
     site: {
       year: "Octubre de 2026",
       title: "SITE MONITOR — Sistema IoT",
-      description: "Prototipo de monitoreo ambiental de instalaciones: detecta presencia de agua y supervisa temperatura y humedad, con alarmas configurables.",
-      learnings: "Arquitectura: sensores y módulos conectados al ESP32-S3; conectividad mediante módulo Ethernet; panel web de configuración y visualización con reportes y gráficas; alertas enviadas a un bot de Telegram. Aprendí a integrar componentes físicos con redes y software. No se publican claves privadas."
+      description: "Sistema de monitoreo ambiental desarrollado con ESP32-S3 para supervisar las condiciones de una instalación, detectar presencia de agua y generar alertas.",
+      learnings: `ARQUITECTURA DEL SISTEMA
+    El ESP32-S3 recibe mediciones de temperatura, humedad y presión mediante un sensor BME280. También supervisa entradas para detectar presencia de agua.
+    El microcontrolador proporciona un servidor web local mediante Wi-Fi, donde se visualizan las lecturas, gráficas, registros y configuraciones de los umbrales.
+    Los datos y eventos se registran en una tarjeta microSD. Cuando se detectan condiciones de alarma, el sistema puede enviar notificaciones mediante un bot de Telegram.
+
+    RETOS TÉCNICOS
+    Integrar la lectura de sensores, almacenamiento, comunicación Wi-Fi, visualización web y envío de alertas dentro de un mismo microcontrolador.
+    También fue necesario implementar configuraciones de umbrales y mecanismos para probar las alarmas.
+
+    RESULTADOS
+    Se desarrolló un prototipo funcional con visualización de variables ambientales, gráficas, historial de eventos, configuración de parámetros y notificaciones de alerta mediante Telegram.
+    El proyecto permitió aplicar conocimientos de programación de microcontroladores, redes, sensores y sistemas IoT.`
     },
+
     hydro: {
       year: "Noviembre de 2025 / Mayo de 2026",
       title: "HydroHero — Videojuego educativo",
